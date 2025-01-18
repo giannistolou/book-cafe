@@ -7,7 +7,7 @@ COPY ./webpack.config.js .
 COPY ./style ./style
 COPY ./app.js .
 RUN yarn build
-
+RUN yarn watch:css
 
 FROM python:3.10.6-alpine as production
 

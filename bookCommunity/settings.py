@@ -34,7 +34,7 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(',')
 
-CSRF_TRUSTED_ORIGINS = ['https://cafe.book-community.com', 'https://www.book-community.com', 'https://book-community.com', 'https://blog.book-community.com']
+CSRF_TRUSTED_ORIGINS = ['http://*'] if DEBUG else ['https://cafe.book-community.com', 'https://www.book-community.com', 'https://book-community.com', 'https://blog.book-community.com']
 
 
 # Application definition
@@ -77,7 +77,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
+         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -98,7 +98,7 @@ WSGI_APPLICATION = 'bookCommunity.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'database/db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3' if DEBUG else BASE_DIR / 'database/db.sqlite3',
     }
 }
 

@@ -9,7 +9,24 @@ Make sure you have the following installed on your machine:
 - Node.js (version 12 or higher)
 - Yarn package manager
 
-## Install Django Dependencies
+## Setup
+
+###  Create and Activate Virtual Environment
+
+If you don't have a virtual environment set up, create one using the following commands:
+
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment (Windows)
+venv\Scripts\activate
+
+# Activate the virtual environment (macOS/Linux)
+source venv/bin/activate
+```
+
+### Install Django Dependencies
 
 Install the required Python packages using pip:
 
@@ -17,14 +34,14 @@ Install the required Python packages using pip:
 pip install -r requirements.txt
 ```
 
-## Install JavaScript Dependencies
+### Install JavaScript Dependencies
 Install the required JavaScript packages using Yarn:
 
 ```bash
 yarn install
 ```
 
-## Build and Watch CSS
+### Build and Watch CSS
 Build the project and start watching for CSS changes:
 
 ```bash
@@ -32,21 +49,21 @@ yarn run build
 yarn run watch:css
 ```
 
-## Run the Project
+### Run the Project
 Start the Django development server:
 
 ```bash
 python manage.py runserver
 ```
 
-## Collect Static Files
+### Collect Static Files
 In another terminal, collect the static files for the project:
 
 ```bash
 python manage.py collectstatic
 ```
 
-## Access the Project
+### Access the Project
 
 Open your web browser and navigate to `http://127.0.0.1:8000` to access the project
 

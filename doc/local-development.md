@@ -1,4 +1,4 @@
- Local Development Setup
+# Local Development Setup
 
 Follow these steps to set up the project for local development.
 

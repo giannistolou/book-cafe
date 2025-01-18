@@ -19,9 +19,9 @@
                 <span>{{ post.author.name }}</span>
             </a>
         </li>
-        <li class="">{% include "svg/date.html" %} {{ post.published_at|date:"d/m/Y" }}</li>
+        <li class="">{% include "svg/date.svg" %} {{ post.published_at|date:"d/m/Y" }}</li>
         <li class="">
-            {% include "svg/category.html" %}
+            {% include "svg/category.svg" %}
             <ul>
                 <li class="inline-block">
                     <a href="/category/{{ post.category.slug }}">{{ post.category.name }}</a>
